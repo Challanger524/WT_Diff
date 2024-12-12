@@ -144,7 +144,7 @@ private:
 			if (row.size() > 1 && this->olderM.find(row[0]) == this->olderM.end()) {
 				row.erase(row.begin() + 2, row.end());
 				for (auto &s : row) Unbracket(s);
-				SetwLeft(row[0]);
+				//SetwLeft(row[0]);
 
 				this->diff.SetRow(diff.GetRowCount(), row);
 				//std::cout << "  " << std::setw(SETW_ID) << std::left << row[0] << "; " << row[1] << "\n";
@@ -166,7 +166,7 @@ private:
 			if (row.size() > 1 && this->newerM.find(row[0]) == this->newerM.end()) {
 				row.erase(row.begin() + 2, row.end());
 				for (auto &s : row) Unbracket(s);
-				SetwLeft(row[0]);
+				//SetwLeft(row[0]);
 
 				this->diff.SetRow(diff.GetRowCount(), row);
 				//std::cout << "  " << std::setw(SETW_ID) << std::left << row[0] << "; " << row[1] << "\n";
@@ -197,8 +197,8 @@ private:
 
 					for (auto &s : newerRow) Unbracket(s);
 					for (auto &s : olderRow) Unbracket(s);
-					SetwLeft(newerRow[0]);
-					SetwLeft(olderRow[0]);
+					//SetwLeft(newerRow[0]);
+					//SetwLeft(olderRow[0]);
 
 					this->diff.SetRow(diff.GetRowCount(), std::vector<std::string>{""});
 					this->diff.SetRow(diff.GetRowCount(), olderRow);
